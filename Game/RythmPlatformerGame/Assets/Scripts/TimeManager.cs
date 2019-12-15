@@ -21,7 +21,7 @@ public class TimeManager : MonoBehaviour
     void Update()
     {
         ts = stopWatch.Elapsed;
-        UnityEngine.Debug.Log(ts.TotalSeconds);
+        //UnityEngine.Debug.Log(ts.TotalSeconds);
 
     }
 }
