@@ -59,9 +59,10 @@ public class clock : MonoBehaviour
         {
             transform.Rotate(0, 0, -80f * Time.deltaTime);
         }
-        if (TimeManager.ts.TotalSeconds > 26 + (basehaha * 8) && TimeManager.ts.TotalSeconds < 26 + (basehaha * 9))
+        if (TimeManager.ts.TotalSeconds > 26 + (basehaha * 8) && TimeManager.ts.TotalSeconds < 27 + (basehaha * 9))
         {
-            transform.Rotate(0, 0, -80f * Time.deltaTime);
+            transform.Rotate(0, 0, -160f * Time.deltaTime);
         }
+
     }
 }
