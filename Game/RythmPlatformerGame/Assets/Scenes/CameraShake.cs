@@ -31,9 +31,8 @@ public class CameraShake : MonoBehaviour
 
 	void Update()
 	{
-        if (TimeManager.ts.TotalSeconds > 83 && TimeManager.ts.TotalSeconds < 83.2)
+        if (TimeManager.ts.TotalSeconds > 83.2 && TimeManager.ts.TotalSeconds < 83.4)
         {
-            originalPos = camTransform.localPosition;
             shakeDuration = 0.8f;
         }
 
@@ -58,7 +57,8 @@ public class CameraShake : MonoBehaviour
 		else
 		{
 			shakeDuration = 0f;
-			//camTransform.localPosition = originalPos;
-		}
-	}
+            originalPos = camTransform.localPosition;
+            //camTransform.localPosition = originalPos;
+        }
+    }
 }

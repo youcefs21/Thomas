@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Controls : MonoBehaviour
 {
-    public static float speed = 1.0f;
+    public static float speed = 0.8f;
 
     private Rigidbody rb;
 

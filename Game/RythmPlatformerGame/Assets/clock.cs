@@ -15,13 +15,13 @@ public class clock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (TimeManager.ts.TotalSeconds > 23.46800-basehaha && TimeManager.ts.TotalSeconds < 24.73400-basehaha)
+        if (TimeManager.ts.TotalSeconds > 23.46800-basehaha/2 && TimeManager.ts.TotalSeconds < 24.73400-basehaha)
         {
-            transform.Rotate(0, 0, -40f * Time.deltaTime);
+            transform.Rotate(0, 0, -20f * Time.deltaTime);
         }
         if (TimeManager.ts.TotalSeconds > 23.46800 && TimeManager.ts.TotalSeconds < 24.73400)
         {
-            transform.Rotate(0, 0, 80f * Time.deltaTime);
+            transform.Rotate(0, 0, 60f * Time.deltaTime);
         }
         if (TimeManager.ts.TotalSeconds > 24.73400 && TimeManager.ts.TotalSeconds < 26)
         {
