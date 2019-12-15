@@ -18,9 +18,7 @@ public class Controls : MonoBehaviour
 
     bool xd = false;
 
-    TimeSpan ts;
-    Stopwatch stopWatch;
-    bool idleplz = false;
+   
 
 
     // Start is called before the first frame update
@@ -51,33 +49,24 @@ public class Controls : MonoBehaviour
             GetComponent<Animator>().SetTrigger("Jump");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             xd = true;
-            stopWatch = new Stopwatch();
-            stopWatch.Start();
+   
         }
 
-        ts = stopWatch.Elapsed;
 
 
-        if (xd && ts.Milliseconds > 100)
+        if (xd )
         {
             GetComponent<Animator>().SetTrigger("haha");
 
         }
 
-        if (xd && IsGrounded() && ts.Milliseconds > 100)
+        if (xd && IsGrounded() )
         {
             GetComponent<Animator>().SetTrigger("DoneJump");
             xd = false;
-            idleplz = true;
-            stopWatch = new Stopwatch();
-            stopWatch.Start();
+          
         }
 
-        if (idleplz)
-        {
-            GetComponent<Animator>().SetTrigger("ok");
-            idleplz = false;
-        }
 
 
 
