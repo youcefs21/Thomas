@@ -7,8 +7,8 @@ using System.Threading;
 
 public class TimeManager : MonoBehaviour
 {
-    TimeSpan ts;
-    Stopwatch stopWatch;
+    public static TimeSpan ts;
+    public static Stopwatch stopWatch;
     // Start is called before the first frame update
     void Start()
     {

@@ -13,7 +13,10 @@ public class Moving : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(2f * Time.deltaTime, 0, 0);
+        if (TimeManager.ts.TotalSeconds > 26)
+        {
+            transform.Translate(5f * Time.deltaTime, 0, 0);
+        }
     }
 
 
