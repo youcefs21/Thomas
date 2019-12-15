@@ -12,13 +12,13 @@ public class Controls : MonoBehaviour
 
     public float jumpForce = 7;
 
-    public SphereCollider col;
+    public CapsuleCollider col;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        col = GetComponent<SphereCollider>();
+        col = GetComponent<CapsuleCollider>();
     }
 
     // Update is called once per frame
