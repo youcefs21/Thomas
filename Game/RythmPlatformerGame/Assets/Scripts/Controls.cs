@@ -31,6 +31,10 @@ public class Controls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+
+
         float straffe = Input.GetAxis("Horizontal") * speed*10;
         straffe *= Time.deltaTime;
 
