@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class Controls : MonoBehaviour
 {
-    public static float speed = 2.0f;
+    public static float speed = 1.0f;
+
+    private Rigidbody rb;
+
+    public LayerMask groundLayers;
+
+    public float jumpForce = 7;
+
+    public SphereCollider col;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
+        col = GetComponent<SphereCollider>();
     }
 
     // Update is called once per frame
@@ -20,5 +29,15 @@ public class Controls : MonoBehaviour
 
 
         transform.Translate(straffe, 0, 0);
+
+        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics.CheckCapsule(col.bounds.center, new Vector3(col.bounds.center.x, col.bounds.min.y, col.bounds.center.z), col.radius * .9f, groundLayers);
     }
 }
